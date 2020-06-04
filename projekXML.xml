@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--Baza danych: Ewidencja psów w schronisku dla bezdomnych zwierząt -->
-
-<!--<!DOCTYPE schronisko SYSTEM "schron.dtd">  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schronisko.xsd" -->
-<schronisko>
+<!DOCTYPE schronisko SYSTEM "schron.dtd">  
+<schronisko xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schronisko.xsd">
     <psy>
         <pies plec="suka" sterylizacja="T">
             <imie>Mania</imie>
