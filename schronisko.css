@@ -1,0 +1,56 @@
+body{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+h2{
+    margin: 15px auto 15px auto;
+    text-align: center;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 0.5px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+#piesy {
+    float: left;
+    padding: 5px;
+    margin:  auto 1% auto 1%;  
+}
+
+#piesy th {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#interwencje {
+    float: left;
+    padding: 5px;
+    margin:  auto 1% auto 1%;
+}
+
+#interwencje th {
+    background-color: orange;
+    color: white;
+}
+
+#pracowniki {
+    float: left;
+    padding: 5px;
+    margin:  auto 1% auto 1%;
+}
+
+#pracowniki th {
+    background-color: tomato;
+    color: white;
+}
+
+div{
+    overflow: auto;
+}

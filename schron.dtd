@@ -1,0 +1,21 @@
+
+<!ELEMENT schronisko (psy,pracownicy)>
+<!ELEMENT psy (pies+)>
+<!ELEMENT pracownicy (pracownik+)>
+<!ELEMENT pies (imie,wiek,nr_chip,interwencja)>
+<!ELEMENT interwencja (data,dzielnica,ulica)> 
+<!ELEMENT pracownik (imie,nazwisko,tel_kom)> 
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT wiek (#PCDATA)>
+<!ELEMENT nr_chip (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT dzielnica (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT tel_kom (#PCDATA)>
+
+<!ATTLIST pracownik id_pracownika ID #REQUIRED>
+<!ATTLIST interwencja id_prac_int IDREF #IMPLIED>
+<!ATTLIST pies plec (pies|suka) #REQUIRED>
+<!ATTLIST pies sterylizacja (T|N) "N">
+<!ATTLIST interwencja typ (odebranie_wlasc|zm_wlasciciel|wolno_bytujacy) #REQUIRED>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+<xs:element name="imie" type="xs:string"/>
+
+<xs:element name="wiek">
+    <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="nr_chip">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{6}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="data" type="xs:date"/>
+
+<xs:element name="dzielnica">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Aniolki"/>
+            <xs:enumeration value="Bretowo"/>
+            <xs:enumeration value="Brzezno"/>
+            <xs:enumeration value="Chelm"/>
+            <xs:enumeration value="Jasien"/>
+            <xs:enumeration value="Kokoszki"/>
+            <xs:enumeration value="Krakowiec - Gorki Zachodnie"/>
+            <xs:enumeration value="Letnica"/>
+            <xs:enumeration value="Matarnia"/>
+            <xs:enumeration value="Mlyniska"/>
+            <xs:enumeration value="Nowy Port"/>
+            <xs:enumeration value="Oliwa"/>
+            <xs:enumeration value="Olszynka"/>
+            <xs:enumeration value="Orunia Gorna - Gdansk Poludnie"/>
+            <xs:enumeration value="Orunia - Sw. Wojciech - Lipce"/>
+            <xs:enumeration value="Osowa"/>
+            <xs:enumeration value="Piecki - Migowo"/>
+            <xs:enumeration value="Przerobka"/>
+            <xs:enumeration value="Przymorze Male"/>
+            <xs:enumeration value="Przymorze Wielkie"/>
+            <xs:enumeration value="Rudniki"/>
+            <xs:enumeration value="Siedlce"/>
+            <xs:enumeration value="Stogi"/>
+            <xs:enumeration value="Strzyza"/>
+            <xs:enumeration value="Suchanino"/>
+            <xs:enumeration value="Srodmiescie"/>
+            <xs:enumeration value="Ujescisko - Lostowice"/>
+            <xs:enumeration value="Wrzeszcz Dolny"/>
+            <xs:enumeration value="Wrzeszcz Gorny"/>
+            <xs:enumeration value="Wyspa Sobieszewska"/>
+            <xs:enumeration value="Wzgórze Mickiewicza"/>
+            <xs:enumeration value="Zaspa - Mlyniec"/>
+            <xs:enumeration value="Zaspa - Rozstaje"/>
+            <xs:enumeration value="Zabianka - Wejhera - Jelitkowo - Tysiaclecia"/>
+            <xs:enumeration value="m. GDANSK"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="ulica" type="xs:string"/>
+
+<xs:element name="nazwisko" type="xs:string"/>
+
+<xs:element name="tel_kom" type="xs:string"/>
+
+<!-- definition of attributes -->
+<xs:attribute name="plec">
+    <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="pies|suka"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="typ">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="wolno_bytujacy"/>
+            <xs:enumeration value="odebranie_wlasc"/>
+            <xs:enumeration value="zm_wlasciciel"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="sterylizacja">
+    <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="T|N"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="id_prac_int">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}-[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="id_pracownika">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}-[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<!-- definition of complex elements -->
+<xs:element name="interwencja">
+  <xs:complexType>
+    <xs:all>
+      <xs:element ref="data"/>
+      <xs:element ref="dzielnica"/>
+      <xs:element ref="ulica"/>
+    </xs:all>
+    <xs:attribute ref="typ" use="required"/>
+    <xs:attribute ref="id_prac_int" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="pies">
+  <xs:complexType>
+    <xs:all>
+      <xs:element ref="imie"/>
+      <xs:element ref="wiek"/>
+      <xs:element ref="nr_chip"/>
+      <xs:element ref="interwencja"/>
+    </xs:all>
+    <xs:attribute ref="plec" use="required"/>
+    <xs:attribute ref="sterylizacja" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="pracownik">
+  <xs:complexType>
+    <xs:all>
+      <xs:element ref="imie"/>
+      <xs:element ref="nazwisko"/>
+      <xs:element ref="tel_kom"/>
+    </xs:all>
+    <xs:attribute ref="id_pracownika" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="psy">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="pies" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="pracownicy">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="pracownik" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="schronisko">
+    <xs:complexType>
+        <xs:all>
+            <xs:element ref="psy"/>
+            <xs:element ref="pracownicy"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:key name="id_pracownikaKey"  >  
+        <xs:selector xpath="pracownicy/pracownik" />  
+        <xs:field xpath="@id_pracownika" />  
+    </xs:key> 
+
+    <xs:keyref name="interwencjaKey" refer="id_pracownikaKey">  
+        <xs:selector xpath="psy/pies/interwencja" />  
+        <xs:field xpath="@id_prac_int" />  
+    </xs:keyref> 
+</xs:element>
+
+</xs:schema> 

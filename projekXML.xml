@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Baza danych: Ewidencja psów w schronisku dla bezdomnych zwierząt -->
+
+<!--<!DOCTYPE schronisko SYSTEM "schron.dtd">  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schronisko.xsd" -->
+<schronisko>
+    <psy>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Mania</imie>
+            <wiek>6</wiek>
+            <nr_chip>123457</nr_chip>
+            <interwencja id_prac_int="EN-122" typ="wolno_bytujacy">
+                <data>2020-03-19</data>
+                <dzielnica>Srodmiescie</dzielnica>
+                <ulica>Kladki</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Sproket</imie>
+            <wiek>2</wiek>
+            <nr_chip>738365</nr_chip>
+            <interwencja id_prac_int="MZ-123" typ="wolno_bytujacy">
+                <data>2019-10-02</data>
+                <dzielnica>Wrzeszcz Dolny</dzielnica>
+                <ulica>Dzielna</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="N">
+            <imie>Brett</imie>
+            <wiek>4</wiek>
+            <nr_chip>947036</nr_chip>
+            <interwencja id_prac_int="EN-122" typ="odebranie_wlasc">
+                <data>2020-02-18</data>
+                <dzielnica>Stogi</dzielnica>
+                <ulica>Wieloszczetna</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Toti</imie>
+            <wiek>13</wiek>
+            <nr_chip>345678</nr_chip>
+            <interwencja id_prac_int="KK-100" typ="wolno_bytujacy">
+                <data>2009-09-22</data>
+                <dzielnica>Wyspa Sobieszewska</dzielnica>
+                <ulica>Turystyczna</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Borys</imie>
+            <wiek>8</wiek>
+            <nr_chip>630924</nr_chip>
+            <interwencja id_prac_int="EN-122" typ="zm_wlasciciel">
+                <data>2018-04-05</data>
+                <dzielnica>Osowa</dzielnica>
+                <ulica>Galaktyczna</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Niunia</imie>
+            <wiek>3</wiek>
+            <nr_chip>484850</nr_chip>
+            <interwencja id_prac_int="EN-122" typ="wolno_bytujacy">
+                <data>2018-04-19</data>
+                <dzielnica>Aniolki</dzielnica>
+                <ulica>Sniadeckich</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Chojrak</imie>
+            <wiek>4</wiek>
+            <nr_chip>171116</nr_chip>
+            <interwencja id_prac_int="MZ-123" typ="wolno_bytujacy">
+                <data>2017-11-16</data>
+                <dzielnica>Nowy Port</dzielnica>
+                <ulica>Na Zaspe</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="N">
+            <imie>Delfin</imie>
+            <wiek>3</wiek>
+            <nr_chip>589091</nr_chip>
+            <interwencja id_prac_int="IK-119" typ="odebranie_wlasc">
+                <data>2020-01-09</data>
+                <dzielnica>Wrzeszcz Dolny</dzielnica>
+                <ulica>Mickiewicza</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Saba</imie>
+            <wiek>10</wiek>
+            <nr_chip>346767</nr_chip>
+            <interwencja id_prac_int="IK-119" typ="zm_wlasciciel">
+                <data>2015-09-19</data>
+                <dzielnica>Srodmiescie</dzielnica>
+                <ulica>Dluga</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Maro</imie>
+            <wiek>7</wiek>
+            <nr_chip>346767</nr_chip>
+            <interwencja id_prac_int="KK-100" typ="odebranie_wlasc">
+                <data>2016-09-18</data>
+                <dzielnica>Olszynka</dzielnica>
+                <ulica>Stalowa</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Czarek</imie>
+            <wiek>11</wiek>
+            <nr_chip>987652</nr_chip>
+            <interwencja id_prac_int="KK-100" typ="zm_wlasciciel">
+                <data>2019-07-17</data>
+                <dzielnica>Suchanino</dzielnica>
+                <ulica>Sobieskieo</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Horton</imie>
+            <wiek>3</wiek>
+            <nr_chip>456784</nr_chip>
+            <interwencja id_prac_int="MZ-123" typ="wolno_bytujacy">
+                <data>2020-05-19</data>
+                <dzielnica>Matarnia</dzielnica>
+                <ulica>Cholipki</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Jagoda</imie>
+            <wiek>14</wiek>
+            <nr_chip>232908</nr_chip>
+            <interwencja id_prac_int="EN-122" typ="odebranie_wlasc">
+                <data>2018-08-30</data>
+                <dzielnica>Srodmiescie</dzielnica>
+                <ulica>Piwna</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Ozi</imie>
+            <wiek>7</wiek>
+            <nr_chip>187654</nr_chip>
+            <interwencja id_prac_int="IK-119" typ="zm_wlasciciel">
+                <data>2016-09-25</data>
+                <dzielnica>Orunia - Sw. Wojciech - Lipce</dzielnica>
+                <ulica>Smolenska</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="pies" sterylizacja="T">
+            <imie>Szarik</imie>
+            <wiek>9</wiek>
+            <nr_chip>677672</nr_chip>
+            <interwencja id_prac_int="IK-119" typ="zm_wlasciciel">
+                <data>2018-12-08</data>
+                <dzielnica>Oliwa</dzielnica>
+                <ulica>Polanki</ulica>
+            </interwencja>
+        </pies>
+        <pies plec="suka" sterylizacja="T">
+            <imie>Randi</imie>
+            <wiek>12</wiek>
+            <nr_chip>342437</nr_chip>
+            <interwencja id_prac_int="KK-100" typ="wolno_bytujacy">
+                <data>2009-11-09</data>
+                <dzielnica>Wyspa Sobieszewska</dzielnica>
+                <ulica>Ptasia</ulica>
+            </interwencja>
+        </pies>
+    </psy>
+    <pracownicy>
+        <pracownik id_pracownika="KK-100">
+            <imie>Krzysztof</imie>
+            <nazwisko>Krasny</nazwisko>
+            <tel_kom>129342412</tel_kom>
+        </pracownik>
+        <pracownik id_pracownika="IK-119">
+            <imie>Irena</imie>
+            <nazwisko>Krasna</nazwisko>
+            <tel_kom>998776456</tel_kom>
+        </pracownik>
+        <pracownik id_pracownika="EN-122">
+            <imie>Elwira</imie>
+            <nazwisko>Nowak</nazwisko>
+            <tel_kom>887636771</tel_kom>
+        </pracownik>
+        <pracownik id_pracownika="MZ-123">
+            <imie>Monika</imie>
+            <nazwisko>Zastawna</nazwisko>
+            <tel_kom>555890065</tel_kom>
+        </pracownik>
+    </pracownicy>
+</schronisko>
